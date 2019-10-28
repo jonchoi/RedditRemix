@@ -30,7 +30,7 @@ class RedditPost: Object, Codable {
 extension RedditPost {
     enum CodingKeys: String, CodingKey {
         case id
-        case author = "author_fullname"
+        case author
         case title
         case body = "selftext"
         case score
