@@ -7,15 +7,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct RedditPost: Codable {
-    var author: String
-    var title: String
-    var body: String
-    var score: Int
-    var thumbnail: String
+// Implemented as a class for Realm.
+class RedditPost: Object, Codable {
+    // @objc dynamic for Realm.
+    // More on working with Realm objects: https://realm.io/docs/swift/latest#working-with-realm-objects
+    @objc dynamic var author: String
+    @objc dynamic var title: String
+    @objc dynamic var body: String
+    @objc dynamic var score: Int
+    @objc dynamic var thumbnail: String
 
-    // TODO: implement model
+    // Feel free to extend implementation.
 }
 
 extension RedditPost {

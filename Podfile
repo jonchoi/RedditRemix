@@ -7,5 +7,6 @@ target 'RedditRemix' do
 
   # Pods for RedditRemix
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'RealmSwift'
 
 end
