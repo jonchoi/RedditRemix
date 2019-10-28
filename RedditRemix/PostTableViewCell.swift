@@ -13,6 +13,7 @@ class PostTableViewCell: UITableViewCell {
 
     // MARK: Properties
 
+    var id: String?
     var author: String?
     var body: String?
     var thumbnail: String?
@@ -26,6 +27,15 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var upvoteButton: UIButton!
     @IBOutlet var downvoteButton: UIButton!
+
+    @IBAction func didTouchUpvote(_ sender: Any) {
+        guard let id = id else {
+            print("id not being set")
+            return
+        }
+        // TODO: implement completion handler to update votes.
+        APIManager.sharedInstance.upvotePost(id)
+    }
 
     // MARK: UITableViewCell
 

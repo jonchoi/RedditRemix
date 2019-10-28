@@ -24,6 +24,14 @@ class APIManager {
         return realmResultToArray(results: results)
     }
 
+    // https://realm.io/docs/swift/latest#updating-objects
+    func upvotePost(_ postId: String) {
+        // TODO: Extra credit. Implement completion handler.
+        guard let post = realm.object(ofType: RedditPost.self, forPrimaryKey: postId) else { return }
+        print(post.body)
+        try! realm.write { post.score += 1 }
+    }
+
     /// Check if Realm is empty.
     private func isDBEmpty() -> Bool {
         return realm.objects(RedditPost.self).isEmpty ? true : false
@@ -58,6 +66,7 @@ class APIManager {
         var array = [RedditPost]()
         guard results.count != 0 else { return array }
         for result in results {
+            print(result.id)
             array.append(result)
         }
         return array

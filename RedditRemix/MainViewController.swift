@@ -40,6 +40,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         // Load data into cell.
         let cellData = posts[indexPath.row]
 
+        cell.id = cellData.id
         cell.author = cellData.author
         cell.thumbnail = cellData.thumbnail
 

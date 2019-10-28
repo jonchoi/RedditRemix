@@ -35,6 +35,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPq-aB-fRA">
                                                     <rect key="frame" x="30" y="47" width="30" height="30"/>
                                                     <state key="normal" title="👍🏼"/>
+                                                    <connections>
+                                                        <action selector="didTouchUpvote:" destination="uAJ-0T-Jbg" eventType="touchUpInside" id="yNc-Ej-n3E"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbp-KR-pD2">
                                                     <rect key="frame" x="30" y="104" width="30" height="30"/>
